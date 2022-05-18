@@ -55,7 +55,7 @@ export default function SignIn() {
 
   return (
     <Container>
-      <Title> My Movie </Title>
+      <Title> CINE.ME </Title>
       <Form onSubmit={handleSubmit}>
         <Input
           placeholder="E-mail"

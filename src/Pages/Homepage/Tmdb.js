@@ -7,7 +7,7 @@ const basicfetch = async (endpoint) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
     return json;
-}
+};
 
 export default {
     getHomeList: async () => {
@@ -43,14 +43,14 @@ export default {
                     info = await basicfetch(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
                     
                     break;
-                    case 'tv':
-                        info = await basicfetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                case 'tv':
+                    info = await basicfetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
                     break;
-                    default:
-                        info = null;
+                default:
+                    info = null;
                     break;
-            }
-        }
+            };
+        };
         return info;
     }
-}
+};

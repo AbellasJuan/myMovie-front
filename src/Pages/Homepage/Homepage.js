@@ -35,7 +35,7 @@ export default function App() {
     },1500);
     
   }, []);
-
+console.log('asd')
   useEffect(()=>{
     const scrollListener = () => {
       if(window.scrollY > 10){
@@ -48,7 +48,7 @@ export default function App() {
     return () => {
     window.removeEventListener('scroll', scrollListener);
     }
-  }, []);
+  }, [blackHeader]);
 
     return (
       <div className="page">

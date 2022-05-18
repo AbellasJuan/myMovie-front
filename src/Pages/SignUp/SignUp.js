@@ -62,7 +62,7 @@ export default function SignUp(){
 
     return (
         <Container>
-            <Title> My Movie </Title>
+            <Title> CINE.ME </Title>
             <Form onSubmit={handleSubmit}>
         <Input
           placeholder="Nome de usuário"

@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-self: ${(props) => props.alignSelf || 'initial'};
-  background-color: #072227;
+  background-color: black;
   min-height: 100vh;
   min-width: 100vw;
 `;
@@ -58,7 +58,7 @@ const Button = styled.button`
   text-align: center;
   color: #FFFFFF;
   padding: 12px;
-  background: #35858B;
+  background: darkred;
   border-radius: 15px;
   margin-top: 20px;
   transition-duration: 600ms;
