@@ -1,8 +1,9 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './contexts/authContext.js';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
-import { AuthProvider } from './contexts/authContext.js';
+import HomePage from './Pages/Homepage';
 
 function App(){
   return (
@@ -10,7 +11,8 @@ function App(){
       <BrowserRouter>
         <Routes>
           <Route path='/sign-up' element={<SignUp/>}/>
-          <Route path='/' element={<SignIn/>}/>
+          <Route path='/sign-in' element={<SignIn/>}/>
+          <Route path='/' element={<HomePage/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
