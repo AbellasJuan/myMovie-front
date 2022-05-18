@@ -1,0 +1,43 @@
+.header-top {
+    height: 70px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    z-index: 999;
+    background: transparent;
+    transition: all ease 0.5s;
+}
+
+.black {
+    background-color: black;
+    overflow: hidden;
+}
+
+.header-top strong {
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-left: 15px;
+}
+
+.header-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.header-user img {
+    height: 50px;
+    border-radius: 100%;
+    overflow-x: hidden;
+}
+
+.header-user span {
+    margin-right: 20px;
+}

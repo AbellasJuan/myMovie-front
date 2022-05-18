@@ -1,9 +1,9 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/authContext.js';
-import SignIn from './Pages/SignIn';
-import SignUp from './Pages/SignUp';
-import HomePage from './Pages/Homepage';
+import SignIn from './Pages/SignIn.js';
+import SignUp from './Pages/SignUp.js';
+import HomePage from './Pages/Homepage/Homepage.js';
 
 function App(){
   return (
