@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import api from '../../src/services/api.js';
+import api from '../../services/api.js';
 import { useNavigate } from 'react-router';
-import {Container, Form, Input, Button, StyledLink, Title } from '../../src/components/Form/index.js';
+import {Container, Form, Input, Button, StyledLink, Title } from '../../components/Form/index.js';
 import Swal from 'sweetalert2';
 
 export default function SignUp(){

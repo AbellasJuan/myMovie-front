@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import api from '../services/api';
-import { Container, Form, Input, Button, StyledLink, Title } from '../components/Form/index';
-import useAuth from '../hooks/useAuth';
+import api from '../../services/api';
+import { Container, Form, Input, Button, StyledLink, Title } from '../../components/Form/index';
+import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 

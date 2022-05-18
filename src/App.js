@@ -1,8 +1,8 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/authContext.js';
-import SignIn from './Pages/SignIn.js';
-import SignUp from './Pages/SignUp.js';
+import SignIn from '../src/Pages/SignIn/SignIn.js'
+import SignUp from '../src/Pages/SignUp/SignUp.js'
 import HomePage from './Pages/Homepage/Homepage.js';
 
 function App(){
