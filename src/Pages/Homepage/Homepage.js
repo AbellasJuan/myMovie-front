@@ -15,6 +15,7 @@ export default function App() {
   const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
+    
     const loadAll = async () => {
       //pegando a lista total
       let list = await Tmdb.getHomeList();
@@ -29,7 +30,10 @@ export default function App() {
       setFeaturedData(chosenInfo);
     }
 
-    loadAll();
+    setTimeout(() => {
+      loadAll();
+    },1500);
+    
   }, []);
 
   useEffect(()=>{
@@ -61,7 +65,8 @@ export default function App() {
             Dados pegos do site Themoviedb.org
         </Footer>
 
-        {movieList.length <= 0 &&    
+        {
+        movieList.length <= 0 &&    
             <div className="loading">
               <img src={loading} alt="Carregando" />
             </div>

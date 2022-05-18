@@ -44,8 +44,8 @@ export default function MovieRow ({title, items}){
                         transition: 'all ease 0.6s',
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(
-                        <div className="movieRow--item">
-                            <img src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
+                        <div className="movieRow--item" index={key}>
+                            <img  src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
                         </div>
                     ))}
                 </div>
