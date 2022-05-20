@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../../styles/movieRow.css";
 import { BiArrowFromRight, BiArrowFromLeft } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
 
-export default function MovieRow ({title, items}){
-
+export default function MovieRow ({title, items, movieId}){
+    const navigate = useNavigate();
     const [scrollX, setScrollX] = useState(-3);
 
     const handleLeftArrow = () => {
@@ -25,6 +26,11 @@ export default function MovieRow ({title, items}){
         setScrollX(x);
     }
 
+    function getMovieInfos(selectedMovie){
+        console.log('entrou', selectedMovie)
+        navigate('/review')
+    }   
+
     return (
         <div className="movieRow">
             <h2> {title} </h2>
@@ -45,7 +51,7 @@ export default function MovieRow ({title, items}){
                 }}>
                     {items.results.length > 0 && items.results.map((item, index)=>(
                         <div className="movieRow--item" key={index}>
-                            <img  key={index} src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
+                            <img  key={index} onClick={() => getMovieInfos(item)} src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
                         </div>
                     ))}
                 </div>

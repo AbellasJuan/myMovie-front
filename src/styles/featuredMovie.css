@@ -61,6 +61,22 @@
     max-width: 60vw;
     padding-bottom: 20px;
     line-height: 28px;
+    max-height: 30vh;
+    overflow: hidden;
+    overflow-y: visible; 
+}
+
+.featured--description::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+.featured--description::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+
+.featured--description::-webkit-scrollbar-thumb {
+    background: #dad7d7;
 }
 
 .featured--genres {
@@ -75,7 +91,7 @@
     padding-bottom: 20px;
 }
 
-.featured--mylistbutton{
+.featured--button{
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -85,9 +101,13 @@
     margin-right: 10px;
     opacity: 0.9;
     transition: all ease 0.2s;
+    background-color: #333;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
 }
 
-.featured--mylistbutton:hover {
+.featured--button:hover {
     opacity: 1;
 }
 
@@ -95,10 +115,4 @@
 .featured--watchbutton {
     background-color: #fff;
     color: #000;
-}
-
-.featured--mylistbutton {
-    background-color: #333;
-    text-decoration: none;
-    color: #fff;
 }

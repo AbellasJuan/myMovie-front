@@ -1,14 +1,20 @@
 import React from "react";
 import "../../styles/featuredMovie.css";
+import { useNavigate } from "react-router-dom";
 
 export default function FeaturedMovie({item}){
-
+    const navigate = useNavigate();
     let firstDate = new Date(item.first_air_date);
 
     let genres = [];
     for(let i in item.genres){
         genres.push(item.genres[i].name);
-    }
+    };
+
+    function getMovieInfos(movieId){
+        console.log('entrou', movieId)
+        navigate(`/review`)
+    };
 
     return(
 
@@ -27,7 +33,7 @@ export default function FeaturedMovie({item}){
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                       <div className="featured--mylistbutton" > Fazer Crítica </div>
+                       <div className="featured--button" onClick={()=> getMovieInfos(item.id)}> Fazer Crítica </div>
                     </div>
                     <div className="featured--genres"><strong>Gêneros: {genres.join(', ')}</strong></div>
                     
