@@ -26,7 +26,7 @@ export default function SignIn() {
     try {
       const { data } = await api.login(user);
       login(data);
-      navigate("/term");
+      navigate("/home");
     } catch (error) {
       let errorMessage = (String(error));
       console.log(errorMessage)
@@ -34,7 +34,7 @@ export default function SignIn() {
           return Swal.fire({
             icon: 'error',
             title: 'Ops...',
-            text: 'O e-mail e a senha devem ter no mín 3 caracteres e o e-mail deve ser válido!',
+            text: 'O e-mail e a senha devem ter no mín 6 caracteres e o e-mail deve ser válido!',
           })
         } else if(errorMessage.includes(404)){
           return Swal.fire({

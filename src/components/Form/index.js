@@ -13,9 +13,8 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 60px;
+  font-weight: 300;
   line-height: 50px;
   text-align: center;
   color: #FFFFFF;
@@ -23,7 +22,7 @@ const Title = styled.h1`
 `
 
 const Form = styled.form`
-  width: 90%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,7 +39,7 @@ const Input = styled.input`
   background: #FFFFFF;
   padding: 15px 16px;
   border-radius: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   ::placeholder {
     color: #000;
   }
@@ -51,7 +50,6 @@ const Button = styled.button`
   box-sizing: border-box;
   cursor: pointer;
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;

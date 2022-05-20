@@ -4,6 +4,7 @@ import { AuthProvider } from './contexts/authContext.js';
 import SignIn from '../src/Pages/SignIn/SignIn.js'
 import SignUp from '../src/Pages/SignUp/SignUp.js'
 import HomePage from './Pages/Homepage/Homepage.js';
+import UserReview from './Pages/UserReview/UserReview.js';
 
 function App(){
   return (
@@ -11,8 +12,9 @@ function App(){
       <BrowserRouter>
         <Routes>
           <Route path='/sign-up' element={<SignUp/>}/>
-          <Route path='/sign-in' element={<SignIn/>}/>
-          <Route path='/' element={<HomePage/>}/>
+          <Route path='/' element={<SignIn/>}/>
+          <Route path='/home' element={<HomePage/>}/>
+          <Route path='/review' element={<UserReview/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
