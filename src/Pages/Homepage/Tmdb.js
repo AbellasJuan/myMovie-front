@@ -20,6 +20,11 @@ export default {
             {
                 slug: 'trending',
                 title: 'Recomendados para você',
+                items: await basicfetch(`/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&language=pt-BR&api_key=${API_KEY}`)
+            },
+            {
+                slug: 'ficção',
+                title: 'Ficção científica',
                 items: await basicfetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
@@ -52,3 +57,5 @@ export default {
         return info;
     }
 };
+
+// https://api.themoviedb.org/3/discover/movie?certification_country=BR&certification.lte=G&sort_by=popularity.desc&api_key=383847002959bd228e1a987afd7940bb

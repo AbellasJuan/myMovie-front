@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../../styles/movieRow.css";
-import { BiArrowFromRight, BiArrowFromLeft } from 'react-icons/bi';
+import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 
-export default function MovieRow ({title, items, movieId}){
+export default function MovieRow ({title, items}){
     const navigate = useNavigate();
     const [scrollX, setScrollX] = useState(-3);
 
@@ -24,23 +24,23 @@ export default function MovieRow ({title, items, movieId}){
         }
         
         setScrollX(x);
-    }
+    };
 
-    function getMovieInfos(selectedMovie){
-        console.log('entrou', selectedMovie)
-        navigate('/review')
-    }   
+    function getMovieInfos(movieId, type){
+        console.log('entrou', movieId)
+        navigate(`/review/${type}/${movieId}`)
+    };
 
     return (
         <div className="movieRow">
             <h2> {title} </h2>
 
             <div className="movieRow--left" onClick={handleLeftArrow}>
-                <BiArrowFromRight style={{fontSize: 40}} />
+                <HiArrowSmLeft style={{fontSize: 40}} />
             </div>
 
             <div className="movieRow--right" onClick={handleRightArrow}>
-                <BiArrowFromLeft style={{fontSize: 40}} />
+                <HiArrowSmRight style={{fontSize: 40}} />
             </div>
 
             <div className="movieRow--listarea">
@@ -51,7 +51,7 @@ export default function MovieRow ({title, items, movieId}){
                 }}>
                     {items.results.length > 0 && items.results.map((item, index)=>(
                         <div className="movieRow--item" key={index}>
-                            <img  key={index} onClick={() => getMovieInfos(item)} src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
+                            <img  key={index} onClick={() => getMovieInfos(item.id, 'movie')} src={`https://image.tmdb.org/t/p/w200${item.poster_path}`} alt={item.original_title} />
                         </div>
                     ))}
                 </div>

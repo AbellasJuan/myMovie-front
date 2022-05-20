@@ -16,7 +16,7 @@ export default function SignIn() {
 
   function handleChange({ target }) {
     setFormData({ ...formData, [target.name]: target.value });
-  }
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,6 +26,7 @@ export default function SignIn() {
     try {
       const { data } = await api.login(user);
       login(data);
+      console.log(data)
       navigate("/home");
     } catch (error) {
       let errorMessage = (String(error));
@@ -48,10 +49,9 @@ export default function SignIn() {
             title: 'Ops...',
             text: 'E-mail ou senha incorretos!',
           })
-        }
-        ;
-    }
-  }
+        };
+    };
+  };
 
   return (
     <Container>
@@ -78,4 +78,4 @@ export default function SignIn() {
       <StyledLink to="/sign-up">Primeira vez? Cadastre-se!</StyledLink>
     </Container>
   );
-}
+};

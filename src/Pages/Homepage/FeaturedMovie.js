@@ -11,9 +11,9 @@ export default function FeaturedMovie({item}){
         genres.push(item.genres[i].name);
     };
 
-    function getMovieInfos(movieId){
+    function getMovieInfos(movieId, type){
         console.log('entrou', movieId)
-        navigate(`/review`)
+        navigate(`/review/${type}/${movieId}`)
     };
 
     return(
@@ -33,10 +33,9 @@ export default function FeaturedMovie({item}){
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                       <div className="featured--button" onClick={()=> getMovieInfos(item.id)}> Fazer Crítica </div>
+                       <div className="featured--button" onClick={()=> getMovieInfos(item.id, 'tv')}> Fazer Crítica </div>
                     </div>
                     <div className="featured--genres"><strong>Gêneros: {genres.join(', ')}</strong></div>
-                    
                 </div>
             </div>
         </section>

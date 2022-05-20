@@ -14,11 +14,11 @@ function App(){
           <Route path='/sign-up' element={<SignUp/>}/>
           <Route path='/' element={<SignIn/>}/>
           <Route path='/home' element={<HomePage/>}/>
-          <Route path='/review' element={<UserReview/>}/>
+          <Route path='/review/:movieType/:movieId' element={<UserReview/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
   )
-}
+};
 
 export default App;

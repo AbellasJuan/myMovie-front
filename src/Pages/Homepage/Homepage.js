@@ -23,11 +23,10 @@ export default function App() {
       if(!auth){
         navigate('/');
       };
-      //pegando a lista total
-      let list = await Tmdb.getHomeList();
+    
+      const list = await Tmdb.getHomeList();
       setMovieList(list);
-
-      //pegando o featured
+    
       let originals = list.filter(item => item.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
       let chosen = originals[0].items.results[randomChosen];
@@ -37,7 +36,7 @@ export default function App() {
     }
     setTimeout(() => {
       loadAll();
-    },1500);
+    },1000);
   }, []);
 
   useEffect(()=>{
@@ -61,7 +60,8 @@ export default function App() {
         {featuredData && <FeaturedMovie item={featuredData}/>}
 
         <section className="lists" >
-          {movieList.map((item, key) => (
+          {movieList.map((item, key) => ( 
+            item.slug !== 'originals' &&
             <MovieRow key={key} title={item.title} items={item.items}/>
           ))}
         </section>
@@ -78,7 +78,6 @@ export default function App() {
 
       </div>
     );
-    
 };
 
 const Footer = styled.div`  

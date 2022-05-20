@@ -76,7 +76,7 @@
 }
 
 .featured--description::-webkit-scrollbar-thumb {
-    background: #dad7d7;
+    background: #817f7f;
 }
 
 .featured--genres {
@@ -111,8 +111,7 @@
     opacity: 1;
 }
 
-
-.featured--watchbutton {
+/* .featured--watchbutton {
     background-color: #fff;
     color: #000;
-}
+} */
