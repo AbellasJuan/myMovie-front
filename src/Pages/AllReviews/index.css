@@ -1,25 +1,30 @@
 .container{
-    margin: 100px 100px 0;
+    margin: 80px 100px 0;
     font-size: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 100px;
 }
 
 .movie-name{
     width: inherit;
+    width: 500px;
     font-size: 50px;
     font-weight: bold;
-    overflow: hidden;
+    overflow: ellipsis;
     flex-wrap: nowrap;
     align-self: center;
-    margin-bottom: 100px;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .movie-image{
     min-width: 300px;
     height: 450px;
+    margin-bottom: -30px;
 }
 
 .image-and-review{
@@ -30,11 +35,9 @@
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    
 }
 
-.user-review textarea{
-    margin-top: 20px;
+.user-review p{
     max-height: 400px;
     min-height: 290px;
     min-width: 365px;
@@ -42,20 +45,21 @@
     width: 400px;
     font-size: 20px;
     padding: 10px;
-    overflow-y: visible;
+    word-break: break-all;
+    overflow-y: scroll;
     border-radius: 5px;
     font-family: 'Josefin Sans';
 }
 
-textarea::-webkit-scrollbar-track {
-    background-color: #F4F4F4;
+p::-webkit-scrollbar-track {
+    background-color: black;
 }
 
-textarea::-webkit-scrollbar {
+p::-webkit-scrollbar {
     width: 6px;
 }
 
-textarea::-webkit-scrollbar-thumb {
+p::-webkit-scrollbar-thumb {
     background: black;
 }
 
