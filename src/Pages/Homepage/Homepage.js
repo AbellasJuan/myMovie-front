@@ -18,7 +18,6 @@ export default function App() {
   const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
-    
     const loadAll = async () => {
       if(!auth){
         navigate('/');
@@ -30,14 +29,14 @@ export default function App() {
       let originals = list.filter(item => item.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
       let chosen = originals[0].items.results[randomChosen];
-      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
+      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'movie');
       
       setFeaturedData(chosenInfo);
     }
     setTimeout(() => {
       loadAll();
     },1000);
-  }, []);
+  }, [auth, navigate]);
 
   useEffect(()=>{
     const scrollListener = () => {
@@ -75,7 +74,6 @@ export default function App() {
               <img src={loading} alt="Carregando" />
             </div>
         }
-
       </div>
     );
 };

@@ -15,7 +15,7 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais',
-                items: await basicfetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+                items: await basicfetch(`/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&language=pt-US&api_key=${API_KEY}`)
             },
             {
                 slug: 'trending',

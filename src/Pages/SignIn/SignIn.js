@@ -4,6 +4,7 @@ import { Container, Form, Input, Button, StyledLink, Title } from '../../compone
 import useAuth from '../../hooks/useAuth';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import useUserInfo from '../../hooks/useUserInfo.js';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ export default function SignIn() {
 
   const { login } = useAuth();
   const navigate = useNavigate();
+  const { fillUser } = useUserInfo();
 
   function handleChange({ target }) {
     setFormData({ ...formData, [target.name]: target.value });
@@ -25,8 +27,9 @@ export default function SignIn() {
 
     try {
       const { data } = await api.login(user);
-      login(data);
-      console.log(data)
+      login(data.token);
+      const userInfos = { id: data.id , userName: data.userName}
+      fillUser(userInfos);
       navigate("/home");
     } catch (error) {
       let errorMessage = (String(error));

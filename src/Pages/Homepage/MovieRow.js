@@ -27,7 +27,6 @@ export default function MovieRow ({title, items}){
     };
 
     function getMovieInfos(movieId, type){
-        console.log('entrou', movieId)
         navigate(`/review/${type}/${movieId}`)
     };
 

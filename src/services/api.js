@@ -19,9 +19,22 @@ async function login(data) {
   return token;
 };
 
+async function postReview(data, token) {
+  const config = createConfig(token);
+  return axios.post(`${BASE_URL}/reviews`, data, config);
+};
+
+async function getUserInfo(id, token) {
+  const config = createConfig(token);
+  const user = await axios.get(`${BASE_URL}/user/${id}`, config);
+  return user;
+};
+
 const api ={
   createUser,
-  login
+  login,
+  postReview,
+  getUserInfo
 };
 
 export default api;
