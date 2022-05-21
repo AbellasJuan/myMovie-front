@@ -3,7 +3,6 @@ import useAuth from '../../hooks/useAuth.js';
 import Tmdb from '../Homepage/Tmdb.js';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
-import {BsFillStarFill} from 'react-icons/bs';
 import api from '../../services/api.js';
 import SingleReview from './SingleReview.js';
 

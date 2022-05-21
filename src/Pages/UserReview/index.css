@@ -14,7 +14,8 @@
     overflow: hidden;
     flex-wrap: nowrap;
     align-self: center;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .movie-image{
@@ -24,6 +25,7 @@
 
 .image-and-review{
     display: flex;
+    margin-top: 30px;
 }
 
 .user-review{

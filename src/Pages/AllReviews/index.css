@@ -1,5 +1,8 @@
 .container{
-    margin: 80px 100px 0;
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 0px;
     font-size: 30px;
     display: flex;
     flex-direction: column;
@@ -17,14 +20,14 @@
     flex-wrap: nowrap;
     align-self: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .movie-image{
     min-width: 300px;
     height: 450px;
-    margin-bottom: -30px;
+    margin-bottom: -90px;
 }
 
 .image-and-review{
@@ -41,10 +44,9 @@
     max-height: 400px;
     min-height: 290px;
     min-width: 365px;
-    max-width: 600px;
+    max-width: 400px;
     width: 400px;
     font-size: 20px;
-    padding: 10px;
     word-break: break-all;
     overflow-y: scroll;
     border-radius: 5px;
