@@ -1,0 +1,90 @@
+.container{
+    margin: 100px 100px 0;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-name{
+    width: inherit;
+    font-size: 50px;
+    font-weight: bold;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    align-self: center;
+    margin-bottom: 100px;
+}
+
+.movie-image{
+    min-width: 300px;
+    height: 450px;
+}
+
+.image-and-review{
+    display: flex;
+}
+
+.user-review{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    
+}
+
+.user-review textarea{
+    margin-top: 20px;
+    max-height: 400px;
+    min-height: 290px;
+    min-width: 365px;
+    max-width: 600px;
+    width: 400px;
+    font-size: 20px;
+    padding: 10px;
+    overflow-y: visible;
+    border-radius: 5px;
+    font-family: 'Josefin Sans';
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+
+textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+.button-save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: all ease 0.2s;
+    background-color: #9999;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 8px;
+    font-family: 'Josefin Sans';
+}
+
+.five-stars{
+    margin-top: 13px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.star{
+    cursor: pointer;
+    color: yellow;
+};

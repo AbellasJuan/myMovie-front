@@ -24,9 +24,9 @@ export default function UserReview(){
             comment: description ,
             grade: rated
         };
-            console.log(data , auth.token)
+        
         try{
-            return await api.postReview(data, auth.token);
+            return await api.postReview(data, auth);
         }catch (error) {
             let errorMessage = (error);
             console.log(errorMessage)

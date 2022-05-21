@@ -7,6 +7,7 @@ import HomePage from './Pages/Homepage/Homepage.js';
 import UserReview from './Pages/UserReview/UserReview.js';
 import Header from './Pages/Homepage/Header.js';
 import { UserProvider } from './contexts/userContext.js';
+import AllReviews from './Pages/AllReviews/AllReviews.js';
 
 function App(){
   return (
@@ -19,6 +20,7 @@ function App(){
             <Route path='/' element={<SignIn/>}/>
             <Route path='/home' element={<HomePage/>}/>
             <Route path='/review/:movieType/:movieId' element={<UserReview/>}/>
+            <Route path='/reviews/:id' element={<AllReviews/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>

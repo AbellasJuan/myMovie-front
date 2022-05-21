@@ -30,11 +30,18 @@ async function getUserInfo(id, token) {
   return user;
 };
 
+async function getReviewedMovies(userId, token) {
+  const config = createConfig(token);
+  const movies = await axios.get(`${BASE_URL}/reviews/${userId}`, config);
+  return movies;
+};
+
 const api ={
   createUser,
   login,
   postReview,
-  getUserInfo
+  getUserInfo,
+  getReviewedMovies
 };
 
 export default api;
