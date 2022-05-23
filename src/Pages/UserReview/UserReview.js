@@ -7,15 +7,19 @@ import { useParams , useNavigate} from "react-router-dom";
 import api from '../../services/api.js';
 import useUserInfo from '../../hooks/useUserInfo';
 
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
 export default function UserReview(){
     const navigate = useNavigate();
     const { auth } = useAuth();
     const { user } = useUserInfo();
     const { movieId, movieType } = useParams();    
     const [movieInfos, setMovieInfos] = useState([]);
-    const [rated, setRated] = useState(0)
     const [description , setDescription] = useState('');
-    
+    const [value, setValue] = useState(0);
 
     async function sendReview(){
         const data = 
@@ -23,7 +27,7 @@ export default function UserReview(){
             userId: user?.id,
             movieId: movieId ,
             comment: description ,
-            grade: rated
+            grade: value
         };
         
         try{
@@ -56,11 +60,7 @@ export default function UserReview(){
         loadMovieInfos();
     }, []);
 
-    function getStars(rate){
-        setRated(rate)
-    };
-
-    console.log(description, rated)
+    console.log(description, value)
 
     return (
         <div className='container'>
@@ -85,11 +85,22 @@ export default function UserReview(){
                     required
                     />
                     <div className='five-stars'>
-                        <div className='star' onClick={() => getStars(1)}><BsFillStarFill/></div>
-                        <div className='star' onClick={() => getStars(2)}><BsFillStarFill/></div>
-                        <div className='star' onClick={() => getStars(3)}><BsFillStarFill/></div>
-                        <div className='star' onClick={() => getStars(4)}><BsFillStarFill/></div>
-                        <div className='star' onClick={() => getStars(5)}><BsFillStarFill/></div>
+                            <Box  >
+                                <Rating
+                                    sx={{
+                                        textAlign: 'center',
+                                        background: '#9999',
+                                        borderRadius: '5px',
+                                        fontSize: "40px",
+                                    }}
+                                    className='star'
+                                    name="simple-controlled"
+                                    value={value}
+                                    onChange={(event, newValue) => {
+                                    setValue(newValue);
+                                    }}
+                                />
+                            </Box>   
                     </div>
 
                     <button className='button-save' onClick={() => sendReview()}>Salvar</button>

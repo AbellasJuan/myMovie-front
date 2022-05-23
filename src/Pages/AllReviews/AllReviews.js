@@ -2,13 +2,11 @@ import React, { useEffect , useState} from 'react';
 import useAuth from '../../hooks/useAuth.js';
 import Tmdb from '../Homepage/Tmdb.js';
 import './index.css';
-import { useNavigate } from 'react-router-dom';
 import api from '../../services/api.js';
 import SingleReview from './SingleReview.js';
 import useUserInfo from '../../hooks/useUserInfo';
 
 export default function AllReviews(){
-    const navigate = useNavigate();
     const { auth } = useAuth();  
     const { user } = useUserInfo();
     const [movieInfos, setMovieInfos] = useState([]);    

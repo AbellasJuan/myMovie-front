@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { Container, Form, Input, Button, StyledLink, Title } from '../../components/Form/index';
 import useAuth from '../../hooks/useAuth';
@@ -11,10 +11,17 @@ export default function SignIn() {
     email: '',
     password: '',
   });
-
+  const { auth } = useAuth();
   const { login } = useAuth();
   const navigate = useNavigate();
   const { fillUser } = useUserInfo();
+
+
+  useEffect(() => {
+        if(auth){
+                navigate('/home');
+        };
+  }, []);
 
   function handleChange({ target }) {
     setFormData({ ...formData, [target.name]: target.value });

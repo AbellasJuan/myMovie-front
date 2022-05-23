@@ -1,4 +1,4 @@
-import {BsFillStarFill} from 'react-icons/bs';
+import {ImStarFull} from 'react-icons/im';
 
 export default function SingleReview({movie}){
 
@@ -20,7 +20,7 @@ export default function SingleReview({movie}){
                         <div className='five-stars'>
                             {
                                 Array.from({length: movie?.userReview.grade}).map(() => 
-                                    <div className='star'><BsFillStarFill/></div>) 
+                                    <div className='star'><ImStarFull/></div>) 
                             }
                         </div>
                     </div>

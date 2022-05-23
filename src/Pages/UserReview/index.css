@@ -32,7 +32,6 @@
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    
 }
 
 .user-review textarea{
@@ -43,10 +42,12 @@
     max-width: 600px;
     width: 400px;
     font-size: 20px;
+    color: rgb(255, 255, 255);
     padding: 10px;
     overflow-y: visible;
     border-radius: 5px;
     font-family: 'Josefin Sans';
+    background-color: #9999;
 }
 
 textarea::-webkit-scrollbar-track {
@@ -59,10 +60,6 @@ textarea::-webkit-scrollbar {
 
 textarea::-webkit-scrollbar-thumb {
     background: black;
-}
-
-.five-stars{
-    margin-top: 13px;
 }
 
 .button-save{
@@ -90,10 +87,8 @@ textarea::-webkit-scrollbar-thumb {
 .five-stars{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+    margin-top: 13px;
 }
 
-.star{
-    cursor: pointer;
-    color: yellow;
-};
