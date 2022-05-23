@@ -5,25 +5,33 @@ import './index.css';
 import api from '../../services/api.js';
 import SingleReview from './SingleReview.js';
 import useUserInfo from '../../hooks/useUserInfo';
+import { useLocation } from 'react-router-dom';
 
 export default function AllReviews(){
     const { auth } = useAuth();  
     const { user } = useUserInfo();
     const [movieInfos, setMovieInfos] = useState([]);    
+    const [friendId, setFriendId] = useState([]);   
     
+    const {search} = useLocation();
+
+    useEffect(() => {
+            setFriendId(search.replace('?friendId=', ''));
+    }, [search]);
 
     useEffect(() => {
         const getReviews = async() => {  
+        
         try{
-            const { data } = await api.getReviewedMovies(user?.id, auth); 
+            const { data } = await api.getReviewedMovies(user?.id, auth, friendId); 
             let info = {};     
             let infoReview = [];
 
             for(let i = 0; i < data.length; i++){
                 info = await Tmdb.getMovieInfo(data[i]?.movieId, 'movie');
-                const teste = {...info, userReview: data[i]}
+                const response = {...info, userReview: data[i]}
                 
-                infoReview.push(teste)
+                infoReview.push(response)
             };
 
             setMovieInfos(infoReview);
@@ -34,11 +42,12 @@ export default function AllReviews(){
         };
         };
         getReviews()
-    },[])
+    // eslint-disable-next-line
+    },[friendId])
 
     return (
-        movieInfos.map((movie) => 
-            <SingleReview movie={movie}/>
+        movieInfos?.map((movie, index) => 
+            <SingleReview key={index} movie={movie}/>
         )
     ); 
 };

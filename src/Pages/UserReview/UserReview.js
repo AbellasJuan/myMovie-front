@@ -42,8 +42,6 @@ export default function UserReview(){
             };
 
             let info = {};
-
-            console.log(movieId, movieType);
             if(movieType === 'movie') {
                 info = await Tmdb.getMovieInfo(movieId, 'movie');
             }else{
@@ -54,6 +52,7 @@ export default function UserReview(){
         };
 
         loadMovieInfos();
+    // eslint-disable-next-line
     }, []);
 
     return (

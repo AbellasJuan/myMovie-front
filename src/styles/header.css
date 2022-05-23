@@ -54,9 +54,44 @@
     cursor: pointer;
 }
 
+.header-input{
+    height: 30px;
+    width: 450px;
+    text-decoration: none;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    font-size: 25px;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    z-index: 9999;
+    border-radius: 5px;
+}
+
 .logout-icon{
     margin-left: 15px;
     font-size: 30px;
     color: white;
+    cursor: pointer;
+}
+
+.list-users{
+    position: fixed;
+    z-index: 0;
+    border-radius: 5px;
+    background-color: white;
+    width: 450px;
+    min-width: 200px;
+    margin-top: -5px;
+    padding-top: 10px;
+    
+}
+
+.list-users p {
+    font-size: 25px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
     cursor: pointer;
 }

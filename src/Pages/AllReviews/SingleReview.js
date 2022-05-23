@@ -19,8 +19,8 @@ export default function SingleReview({movie}){
                         <p>{movie?.userReview.comment}</p>
                         <div className='five-stars'>
                             {
-                                Array.from({length: movie?.userReview.grade}).map(() => 
-                                    <div className='star'><ImStarFull/></div>) 
+                                Array.from({length: movie?.userReview.grade}).map((item ,index) => 
+                                    <div className='star' key={index}><ImStarFull/></div>) 
                             }
                         </div>
                     </div>
