@@ -7,7 +7,7 @@ import HomePage from './Pages/Homepage/Homepage.js';
 import UserReview from './Pages/UserReview/UserReview.js';
 import Header from './Pages/Homepage/Header.js';
 import { UserProvider } from './contexts/userContext.js';
-import AllReviews from './Pages/AllReviews/AllReviews.js';
+import AllReviews from './Pages/ShowReviews/AllReviews.js';
 
 function App(){
   return (

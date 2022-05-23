@@ -1,14 +1,15 @@
 import React from 'react';
 import '../../styles/header.css';
 import useUserInfo from '../../hooks/useUserInfo';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header({black}){
-
     const { user } = useUserInfo();
+    const navigate = useNavigate()
 
     return(
         <div className={black ? "header-top black" : "header-top"}>
-            <strong>CINE.ME</strong> 
+            <strong onClick={() => navigate('/home')}>CINE.ME</strong> 
             <div className="header-user">
                 <span>{user?.userName}</span>
                     <a href="/">

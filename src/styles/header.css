@@ -24,6 +24,13 @@
     font-weight: 300;
     margin-left: 15px;
     text-shadow: 2px 2px 1px black;
+    cursor: pointer;
+}
+
+.header-top strong:hover{
+    filter: brightness(2.0);
+    transition-duration: 700ms;
+    transform: scale(1.06);
 }
 
 .header-user{

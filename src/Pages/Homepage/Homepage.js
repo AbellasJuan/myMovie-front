@@ -9,7 +9,6 @@ import styled from 'styled-components';
 import loading from '../../assets/cinemeloading.gif';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function App() { 
   const { auth } = useAuth();
   const navigate = useNavigate();

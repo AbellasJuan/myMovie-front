@@ -5,21 +5,24 @@ import './index.css';
 import { useNavigate } from 'react-router-dom';
 import api from '../../services/api.js';
 import SingleReview from './SingleReview.js';
+import useUserInfo from '../../hooks/useUserInfo';
 
 export default function AllReviews(){
     const navigate = useNavigate();
     const { auth } = useAuth();  
+    const { user } = useUserInfo();
     const [movieInfos, setMovieInfos] = useState([]);    
+    
 
     useEffect(() => {
         const getReviews = async() => {  
         try{
-            const { data } = await api.getReviewedMovies("5", auth); 
+            const { data } = await api.getReviewedMovies(user?.id, auth); 
             let info = {};     
             let infoReview = [];
 
             for(let i = 0; i < data.length; i++){
-                info = await Tmdb.getMovieInfo(data[i].movieId, 'movie');
+                info = await Tmdb.getMovieInfo(data[i]?.movieId, 'movie');
                 const teste = {...info, userReview: data[i]}
                 
                 infoReview.push(teste)
