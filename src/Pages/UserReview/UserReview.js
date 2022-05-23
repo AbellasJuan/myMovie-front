@@ -2,15 +2,11 @@ import React, { useEffect , useState} from 'react';
 import useAuth from '../../hooks/useAuth.js';
 import Tmdb from '../Homepage/Tmdb.js';
 import './index.css';
-import {BsFillStarFill} from 'react-icons/bs';
 import { useParams , useNavigate} from "react-router-dom";
 import api from '../../services/api.js';
 import useUserInfo from '../../hooks/useUserInfo';
-
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
-
 
 export default function UserReview(){
     const navigate = useNavigate();
@@ -59,8 +55,6 @@ export default function UserReview(){
 
         loadMovieInfos();
     }, []);
-
-    console.log(description, value)
 
     return (
         <div className='container'>

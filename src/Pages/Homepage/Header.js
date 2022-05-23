@@ -22,8 +22,8 @@ export default function Header({black}){
         <div className={black ? "header-top black" : "header-top"}>
             <strong onClick={() => navigate('/home')}>CINE.ME</strong> 
             <div className="header-user">
-                <span>{user ? user.userName : ''}</span>
-                    <div>
+                <span onClick={() => navigate(`/reviews/${user?.id}`)} >{user ? user.userName : ''}</span>
+                    <div onClick={() => navigate(`/reviews/${user?.id}`)} >
                         {user?.userName && <img src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" alt="Usuario" />}
                     </div>
                     <div className="logout-icon" onClick={() => logout()}>{user?.userName && <BiExit/>}</div>

@@ -64,6 +64,8 @@
     max-height: 30vh;
     overflow: hidden;
     overflow-y: visible; 
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: white
 }
 
 .featured--description::-webkit-scrollbar-track {
@@ -110,8 +112,3 @@
 .featured--button:hover {
     opacity: 1;
 }
-
-/* .featured--watchbutton {
-    background-color: #fff;
-    color: #000;
-} */
