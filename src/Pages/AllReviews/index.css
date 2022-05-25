@@ -47,7 +47,7 @@
     max-width: 400px;
     width: 400px;
     font-size: 20px;
-    word-break: break-all;
+    word-wrap: none;
     overflow-y: scroll;
     border-radius: 5px;
     font-family: 'Josefin Sans';
