@@ -41,10 +41,12 @@ export default function Header({black}){
         navigate(`/reviews/${user.id}?friendId=${friendId}`)
     };
 
+    console.log(location.pathname)
+
     return(
         <div className={black ? "header-top black" : "header-top"}>
             <strong onClick={() => navigate('/home')}>CINE.ME</strong> 
-            { location.pathname !== "/" || location.pathname !== "/sign-up" ? '' : <div className='search-bar'>
+            { location.pathname === "/" || location.pathname === "/sign-up" ? '' : <div className='search-bar'>
                 <input
                     className='header-input'
                     placeholder="Veja as críticas de outras pessoas"
