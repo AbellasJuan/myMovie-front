@@ -48,7 +48,7 @@ export default function SignUp(){
           return Swal.fire({
             icon: 'error',
             title: 'Ops...',
-            text: 'O usuário e a senha devem ter no mín 3 caracteres e o e-mail deve ser válido!',
+            text: 'O usuário e a senha devem ter no mín 3 caracteres e o e-mail deve ser válido!!',
           })
         } else if(errorMessage.includes(409)){
           return Swal.fire({
