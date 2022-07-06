@@ -1,6 +1,6 @@
 import React, { useEffect , useState} from 'react';
 import useAuth from '../../hooks/useAuth.js';
-import Tmdb from '../Homepage/Tmdb.js';
+import Tmdb from '../../Pages/Main/TMDB/Tmdb.js';
 import './index.css';
 import { useParams , useNavigate} from "react-router-dom";
 import api from '../../services/api.js';

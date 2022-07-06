@@ -1,12 +1,12 @@
 import React, { useEffect , useState} from 'react';
-import useAuth from '../../hooks/useAuth.js';
-import Tmdb from '../Homepage/Tmdb.js';
-import MovieRow from '../Homepage/MovieRow.js';
-import '../../styles/app.css';
-import FeaturedMovie from '../Homepage/FeaturedMovie.js';
-import Header from '../Homepage/Header.js';
+import useAuth from '../../../hooks/useAuth.js';
+import Tmdb from '../TMDB/Tmdb.js';
+import MovieRow from '../MovieRow/MovieRow.js';
+import '../../../assets/styles/app.css';
+import FeaturedMovie from '../FeaturedMovie/FeaturedMovie.js';
+import Header from '../Header/Header.js';
 import styled from 'styled-components';
-import loading from '../../assets/cinemeloading.gif';
+import loading from '../../../assets/cinemeloading.gif';
 import { useNavigate } from 'react-router-dom';
 
 export default function App() { 

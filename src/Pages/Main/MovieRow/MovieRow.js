@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/movieRow.css";
+import "./index.css";
 import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 

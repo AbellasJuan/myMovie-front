@@ -1,13 +1,12 @@
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './contexts/authContext.js';
-import SignIn from '../src/Pages/SignIn/SignIn.js'
-import SignUp from '../src/Pages/SignUp/SignUp.js'
-import HomePage from './Pages/Homepage/Homepage.js';
-import UserReview from './Pages/UserReview/UserReview.js';
-import Header from './Pages/Homepage/Header.js';
 import { UserProvider } from './contexts/userContext.js';
-import AllReviews from './Pages/AllReviews/AllReviews.js';
+import Header from './Pages/Main/Header/Header.js';
+import HomePage from '../src/Pages/Main/HomePage/HomePage.js';
+import SignIn from '../src/Pages/SignIn/SignIn.js';
+import SignUp from '../src/Pages/SignUp/SignUp.js';
+import UserReview from '../src/Pages/UserReview/UserReview.js';
+import AllReviews from '../src/Pages/Reviews/AllReviews.js';
 
 function App(){
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/featuredMovie.css";
+import "../FeaturedMovie/index.css";
 import { useNavigate } from "react-router-dom";
 
 export default function FeaturedMovie({item}){

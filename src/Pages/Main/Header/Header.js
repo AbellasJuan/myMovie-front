@@ -1,11 +1,11 @@
 import { React, useState } from 'react';
-import '../../styles/header.css';
-import useUserInfo from '../../hooks/useUserInfo';
+import './index.css';
+import useUserInfo from '../../../hooks/useUserInfo';
 import { useLocation, useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth.js';
+import useAuth from '../../../hooks/useAuth.js';
 import {BiExit} from 'react-icons/bi';
 import {FaUserFriends} from 'react-icons/fa';
-import api from "../../services/api.js"
+import api from "../../../services/api.js"
 
 export default function Header({black}){
     const { user } = useUserInfo();
@@ -40,8 +40,6 @@ export default function Header({black}){
         setListOfUsers([])
         navigate(`/reviews/${user.id}?friendId=${friendId}`)
     };
-
-    console.log(location.pathname)
 
     return(
         <div className={black ? "header-top black" : "header-top"}>
