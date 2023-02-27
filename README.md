@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CINE.ME is a web application that offers a social network for movie lovers. In this
+application, you can register and rate hundreds of movies from the IMDB API, such as
+seeing your friends’ reviews. Node.js, JWT, localStorage, Material UI and React were
+used to develop this platform, providing a secure and engaging user experience.
 
 ## Available Scripts
 
